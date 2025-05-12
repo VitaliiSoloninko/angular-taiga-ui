@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <tui-textfield>
+    <label tuiLabel>Project name</label>
+    <input placeholder="Project name" tuiTextfield formControlName="name" />
+  </tui-textfield>
+
+  <tui-textfield tuiChevron>
+    <label tuiLabel>Organization</label>
+    <input tuiSelect formControlName="organization" />
+    <tui-data-list-wrapper *tuiTextfieldDropdown new [items]="organizations" />
+  </tui-textfield>
+</form>
