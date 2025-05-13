@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { TuiButton, TuiRoot } from '@taiga-ui/core';
+import { TuiRoot } from '@taiga-ui/core';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 
 @Component({
   selector: 'app-root',
-  imports: [TuiRoot, TuiButton, BasicFormComponent],
+  imports: [TuiRoot, BasicFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

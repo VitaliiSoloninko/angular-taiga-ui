@@ -9,4 +9,36 @@
     <input tuiSelect formControlName="organization" />
     <tui-data-list-wrapper *tuiTextfieldDropdown new [items]="organizations" />
   </tui-textfield>
+
+  <tui-textfield>
+    <label tuiLabel>Password</label>
+    <input
+      placeholder="Password"
+      tuiTextfield
+      type="password"
+      formControlName="password"
+    />
+    <tui-icon tuiPassword />
+  </tui-textfield>
+
+  <tui-textfield tuiChevron [content]="valueContent">
+    <label tuiLabel>Region</label>
+    <input tuiSelect formControlName="region" />
+    <tui-data-list-wrapper
+      *tuiTextfieldDropdown
+      new
+      [items]="regions"
+      [itemContent]="valueContent"
+    />
+  </tui-textfield>
+
+  <ng-template #valueContent let-item>
+    <img
+      [alt]="item.isoCode"
+      [src]="item.isoCode | tuiFlag"
+      [style.border-radius.%]="50"
+    />
+
+    {{ item.name }}
+  </ng-template>
 </form>

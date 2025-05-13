@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { TuiTextfield } from '@taiga-ui/core';
-import { TuiChevron, TuiDataListWrapper, TuiSelect } from '@taiga-ui/kit';
+import { TuiFlagPipe, TuiIcon, TuiTextfield } from '@taiga-ui/core';
+import {
+  TuiChevron,
+  TuiDataListWrapper,
+  TuiPassword,
+  TuiSelect,
+} from '@taiga-ui/kit';
 
 @Component({
   selector: 'app-basic-form',
@@ -11,6 +16,9 @@ import { TuiChevron, TuiDataListWrapper, TuiSelect } from '@taiga-ui/kit';
     TuiDataListWrapper,
     TuiChevron,
     TuiSelect,
+    TuiPassword,
+    TuiIcon,
+    TuiFlagPipe,
   ],
 
   templateUrl: './basic-form.component.html',
