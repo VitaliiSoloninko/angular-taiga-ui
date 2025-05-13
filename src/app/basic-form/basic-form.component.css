@@ -3,10 +3,15 @@
   flex-direction: column;
   gap: 1rem;
   min-width: 25rem;
+  max-width: 85dvw;
   margin: 2rem auto;
   padding: 1rem;
 }
 
 form {
   display: contents;
+}
+
+h1 {
+  text-align: center;
 }
