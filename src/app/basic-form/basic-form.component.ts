@@ -1,12 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { TuiFlagPipe, TuiIcon, TuiTextfield } from '@taiga-ui/core';
+import { TuiButton, TuiIcon, TuiTextfield } from '@taiga-ui/core';
 import {
   TuiChevron,
   TuiDataListWrapper,
   TuiPassword,
   TuiSelect,
 } from '@taiga-ui/kit';
+import { TuiCell } from '@taiga-ui/layout';
 
 @Component({
   selector: 'app-basic-form',
@@ -18,7 +20,9 @@ import {
     TuiSelect,
     TuiPassword,
     TuiIcon,
-    TuiFlagPipe,
+    TuiCell,
+    CommonModule,
+    TuiButton,
   ],
 
   templateUrl: './basic-form.component.html',
@@ -51,4 +55,8 @@ export class BasicFormComponent {
     region: new FormControl(''),
     password: new FormControl(''),
   });
+
+  onSubmit(): void {
+    console.log(this.form.value);
+  }
 }

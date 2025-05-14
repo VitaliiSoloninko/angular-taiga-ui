@@ -1,5 +1,5 @@
 <h1>Taiga UI Basic form</h1>
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <tui-textfield>
     <label tuiLabel>Project name</label>
     <input placeholder="Project name" tuiTextfield formControlName="name" />
@@ -33,13 +33,11 @@
     />
   </tui-textfield>
 
-  <ng-template #valueContent let-item>
-    <img
-      [alt]="item.isoCode"
-      [src]="item.isoCode | tuiFlag"
-      [style.border-radius.%]="50"
-    />
+  <button tuiButton type="submit">Submit</button>
 
-    {{ item.name }}
+  <ng-template #valueContent let-item>
+    <div tuiCell="m">
+      <span> {{ item.name }}</span>
+    </div>
   </ng-template>
 </form>
